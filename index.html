@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Smart Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-title">
+<span class="app-logo">🧮</span>
+<h1>Smart Calculator</h1>
+</div>
+
+<label class="theme-toggle">
+<input type="checkbox" id="themeToggle">
+<span class="toggle-slider"></span>
+</label>
+
+</header>
+
+
+<div class="container">
+
+<!-- CALCULATOR -->
+
+<div class="calculator">
+
+<div class="display-wrapper">
+
+<input type="text" id="display" readonly>
+
+<button class="copy-btn" onclick="copyResult()">📋</button>
+
+</div>
+<div id="copyToast">Copied!</div>
+
+<div class="buttons">
+
+<button onclick="clearDisplay()">C</button>
+<button onclick="deleteLast()">DEL</button>
+<button onclick="appendValue('%')">%</button>
+<button onclick="appendValue('/')">÷</button>
+
+<button onclick="appendValue('7')">7</button>
+<button onclick="appendValue('8')">8</button>
+<button onclick="appendValue('9')">9</button>
+<button onclick="appendValue('*')">×</button>
+
+<button onclick="appendValue('4')">4</button>
+<button onclick="appendValue('5')">5</button>
+<button onclick="appendValue('6')">6</button>
+<button onclick="appendValue('-')">−</button>
+
+<button onclick="appendValue('1')">1</button>
+<button onclick="appendValue('2')">2</button>
+<button onclick="appendValue('3')">3</button>
+<button onclick="appendValue('+')">+</button>
+
+<button class="zero" onclick="appendValue('0')">0</button>
+<button onclick="appendValue('.')">.</button>
+<button onclick="calculate()">=</button>
+
+</div>
+
+</div>
+
+
+<!-- HISTORY -->
+
+<div class="history">
+
+<h3>Recent History</h3>
+
+<ul id="historyList"></ul>
+
+<button class="clear-history" onclick="clearHistory()">Clear History</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
